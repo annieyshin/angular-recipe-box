@@ -27,5 +27,20 @@ export class AppComponent {
       ['Two slices of sandwich bread', 'two slices of cheddar cheese', '1/4 inch butter'],
       ['Take the butter and melt on a pan', 'toast the bread on the pan and place cheese in the middle', 'grill till toasty golden and cheese has melted perfectly in the middle of the sandwich... now enjoy']
     )
-  ]
+  ];
+
+  selectedRecipe: Recipe;
+
+  onSelect(recipe: Recipe): void {
+    if (this.selectedRecipe === recipe) {
+          this.selectedRecipe = null;
+        } else {
+          this.selectedRecipe = recipe;
+        }
+      }
+
+  constructor() { }
+
+  ngOnInit() {
+  }
 }
