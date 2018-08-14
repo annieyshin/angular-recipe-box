@@ -10,7 +10,20 @@
     <li *ngFor='let ingredient of recipe.ingredients'>
       {{ingredient}}
     </li>
+    <li class="ingredientList" *ngFor="let ingredient of newIngredient">
+      {{ingredient}}
+    </li>
   </ul>
+
+  <form class="ingredientForm">
+    <input type="text" name="addIngredient" placeholder="Add ingredient here .." [(ngModel)]="ingredientText">
+    <br>
+    <br>
+    <input type="submit" class="btn btn-info" [value]="btnText" (click)="addNewIngredient()">
+  </form>
+
+
+
   <h4 class="marg-top">Instructions</h4>
   <ol>
     <li *ngFor='let instruction of recipe.directions'>
