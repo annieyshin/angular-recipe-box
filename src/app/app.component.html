@@ -3,7 +3,8 @@
   <ul>
     <li *ngFor='let currentRecipe of recipes'>
           <h3>{{currentRecipe.title}}</h3>
-          <h5>Ingredients</h5>
+          <img src="{{currentRecipe.image}}" alt="{{currentRecipe.title}}">
+          <h4>Ingredients</h4>
           <ul>
             <li *ngFor='let eachIngredient of currentRecipe.ingredients'>
               {{eachIngredient}}
@@ -17,5 +18,4 @@
           </ol>
     </li>
   </ul>
-
 </div>
