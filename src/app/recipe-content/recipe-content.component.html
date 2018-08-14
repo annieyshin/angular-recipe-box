@@ -1,7 +1,7 @@
 <div *ngIf="recipe">
   <img src="{{recipe.image}}" alt="{{recipe.title}}">
-  <div>
-    <label><h5>Name:</h5>
+  <div class="name">
+    <label><h4>Name:</h4>
       <input class="form-control" [(ngModel)]="recipe.title" placeholder="title">
     </label>
   </div>
@@ -11,7 +11,7 @@
       {{ingredient}}
     </li>
   </ul>
-  <h4>Instructions</h4>
+  <h4 class="marg-top">Instructions</h4>
   <ol>
     <li *ngFor='let instruction of recipe.directions'>
     {{instruction}}
