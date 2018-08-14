@@ -10,9 +10,6 @@
     <li *ngFor='let ingredient of recipe.ingredients'>
       {{ingredient}}
     </li>
-    <li class="ingredientList" *ngFor="let ingredient of newIngredient">
-      {{ingredient}}
-    </li>
   </ul>
 
   <form class="ingredientForm">
@@ -30,4 +27,10 @@
     {{instruction}}
     </li>
   </ol>
+  <form class="directionForm">
+    <input type="text" name="addDirection" placeholder="Add direction here .." [(ngModel)]="directionText">
+    <br>
+    <br>
+    <input type="submit" class="btn btn-info" [value]="btnText" (click)="addNewDirection()">
+  </form>
 </div>

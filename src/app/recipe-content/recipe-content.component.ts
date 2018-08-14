@@ -11,10 +11,7 @@ export class RecipeDetailComponent implements OnInit {
 
   btnText = "Submit";
   ingredientText = "Add ingredient here..";
-  newIngredient = [];
-
-
-
+  directionText = "Add direction here..";
 
   constructor() { }
 
@@ -24,6 +21,11 @@ export class RecipeDetailComponent implements OnInit {
   addNewIngredient(){
     this.recipe.ingredients.push(this.ingredientText);
     this.ingredientText = "";
+  }
+
+  addNewDirection(){
+    this.recipe.directions.push(this.directionText);
+    this.directionText = "";
   }
 
 }
